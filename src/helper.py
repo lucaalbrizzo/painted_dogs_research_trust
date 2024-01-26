@@ -150,3 +150,43 @@ def clean_insectivore(value):
         value = value.replace(" =", "=")
         value = value.replace("= ", "=")
         return value
+
+
+def remove_nontime(value):
+    if pd.isna(value) or isinstance(value, datetime.time):
+        return value
+    print(value)
+    return np.nan
+
+
+def clean_speed(df):
+    dt = df.iloc[10, 0]
+    dt = "date_" + dt
+    dt = dt.replace("/", "-")
+
+    df = df.iloc[11:34, :]
+
+    values_mapping = {
+        "Unnamed: 0": dt,
+        "Unnamed: 1": "dir_1_15",
+        "Unnamed: 2": "dir_16_20",
+        "Painted Dog Research Trust\n": "dir_21_25",
+        "Unnamed: 4": "dir_26_30",
+        "Unnamed: 5": "dir_31_35",
+        "Unnamed: 6": "dir_36_40",
+        "Unnamed: 7": "dir_41_45",
+        "Unnamed: 8": "dir_46_50",
+        "Unnamed: 9": "dir_51_55",
+        "Unnamed: 10": "dir_56_60",
+        "Unnamed: 11": "dir_61_65",
+        "Unnamed: 12": "dir_66_70",
+        "Page 1": "dir_71_75",
+        "Unnamed: 14": "dir_76_999",
+        "Unnamed: 15": "total",
+        "Unnamed: 16": "pace_speed",
+        "Unnamed: 17": "number_in_pace",
+    }
+
+    df_cleaned = df.rename(values_mapping, axis="columns")
+
+    return df_cleaned
