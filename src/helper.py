@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import datetime
+import os
 
 
 class DatasetVariable(object):
@@ -190,3 +191,16 @@ def clean_speed(df):
     df_cleaned = df.rename(values_mapping, axis="columns")
 
     return df_cleaned
+
+
+def upload_csv(filename, date_list=None):
+    FILE_PATH = os.path.join("..", "data", filename)
+    df = pd.read_csv(FILE_PATH, parse_dates=date_list)
+    return df
+
+
+def trim_date_time(value):
+    if not isinstance(value, str):
+        return value
+    value_trimmed = value[:19]
+    return datetime.datetime.strptime(value_trimmed, "%Y-%m-%d %H:%M:%S")
