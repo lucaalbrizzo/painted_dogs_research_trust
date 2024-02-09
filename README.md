@@ -1,3 +1,5 @@
 # Statistics without Borders x Painted Dogs Research Trust
 
-Github for SWB x PDRT, do not hesitate to open a branch 
+Github repository for SWB x PDRT project.
+
+[Click here](https://wildlife-and-traffic-dashboard-demo.streamlit.app/) to view a dashboard demo for PDRT using synthetic data.
