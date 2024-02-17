@@ -25,6 +25,15 @@ this will install some common libraries for data analysis.
 
 ## CLEANING DATA
 
+All data cleaning should be carried in a [Jupyter notebook](https://jupyter.org/) an interactive development environment used often for data analysis. 
 
+To open a new jupyter notebook, just run in the terminal
+```
+jupyter notebook
+```
+Once this is done, go in the **src** folder and run the following notebooks (from beginning to the end):
+- **cleaning_speed_data.ipynb** ,  which cleans **"TEST SPEED SUPPLIED WITH SOFTWARE V4.xls"** file containg wildlife data and saves several files called **"cleaned_speed_{n}.csv"** with n representing a spreadsheet 
+- **cleaning_traffic_data.ipynb** ,  which cleans **"Traffic Data Master 2022-2 Billy.xlsx"** file containg traffic data and saves a new file **"cleaned_traffic_sept.csv"**  
+- **cleaning_wildlife_data.ipynb** , which cleans **"GR merged  CT All with OC Master PDRT  Camera Trap Data Sheet.xlsx"** file containg wildlife data and saves a new file **"cleaned_wildlife_1722.csv"**  
 
 [Click here](https://wildlife-and-traffic-dashboard-demo.streamlit.app/) to view a dashboard demo for PDRT using synthetic data.
