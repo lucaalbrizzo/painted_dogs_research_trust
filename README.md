@@ -34,6 +34,20 @@ jupyter notebook
 Once this is done, go in the **src** folder and run the following notebooks (from beginning to the end):
 - **cleaning_speed_data.ipynb** ,  which cleans **"TEST SPEED SUPPLIED WITH SOFTWARE V4.xls"** file containg wildlife data and saves several files called **"cleaned_speed_{n}.csv"** with n representing a spreadsheet 
 - **cleaning_traffic_data.ipynb** ,  which cleans **"Traffic Data Master 2022-2 Billy.xlsx"** file containg traffic data and saves a new file **"cleaned_traffic_sept.csv"**  
-- **cleaning_wildlife_data.ipynb** , which cleans **"GR merged  CT All with OC Master PDRT  Camera Trap Data Sheet.xlsx"** file containg wildlife data and saves a new file **"cleaned_wildlife_1722.csv"**  
+- **cleaning_wildlife_data.ipynb** , which cleans **"GR merged  CT All with OC Master PDRT  Camera Trap Data Sheet.xlsx"** file containg wildlife data and saves a new file **"cleaned_wildlife_1722.csv"**
 
-[Click here](https://wildlife-and-traffic-dashboard-demo.streamlit.app/) to view a dashboard demo for PDRT using synthetic data.
+## DATA ANALYSIS ON CLEAN DATA
+
+The **src** folder cointains also two notebooks for data analysis using cleaned data:
+- **eda_traffic.ipynb** , which performs data analysis about traffic overall and per company 
+- **eda_wildlife.ipynb** , which performs data analysis about animal activity per specie, day, ...
+
+
+ ## INTERACTIVE DASHBOARD
+
+All the results above can be also found in an [interactive dashboard](https://wildlife-and-traffic-dashboard-demo.streamlit.app/)  PDRT using synthetic data, which allows the user to play with data without having to run the Python scripts.
+
+The link above requires Internet connection but a local version can be run by going in the folder **src/demo_app** and run
+```
+streamlit run Wildlife_and_Traffic_Demo.py 
+```
