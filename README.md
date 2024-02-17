@@ -51,3 +51,5 @@ The link above requires Internet connection but a local version can be run by go
 ```
 streamlit run Wildlife_and_Traffic_Demo.py 
 ```
+
+If the users wishes to modify the dashboard can go to the **src/demo_app/pages** folder where all the pages of the dashboard are saved.
