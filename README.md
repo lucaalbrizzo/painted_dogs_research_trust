@@ -1,5 +1,7 @@
 # Statistics without Borders x Painted Dogs Research Trust
 
+## INTRODUCTION
+
 This is the  Github repository for the collabation project between Statistics Without Borders (SWB) and Painted Dog Research Trust (PDRT).
 
 The main goal of this repository is to show how to build a data pipeline that would allow PDRT to obtain easily insights from the data they collect on field.
@@ -11,5 +13,18 @@ This means that if the data collected by PDRT changes in structure (e.g. new col
 All scripts were written in Python (version 3.10.12) and therefore the user needs Python to be [installed on their machine](https://www.python.org/downloads/). 
 
 Moreover, in order to easily install all the needed libraries, the user might want to [install pip too](https://pip.pypa.io/en/stable/installation/).
+
+
+## INSTALL LIBRARIES
+
+All needed libraries can be installed via pip
+```
+pip install -r requirements.txt
+```
+this will install some common libraries for data analysis.
+
+## CLEANING DATA
+
+
 
 [Click here](https://wildlife-and-traffic-dashboard-demo.streamlit.app/) to view a dashboard demo for PDRT using synthetic data.
